@@ -1,0 +1,1 @@
+export const LOGO_URL="https://brand.foodhub.com/images/png/logo_vertical_new.png"

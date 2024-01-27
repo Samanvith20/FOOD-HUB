@@ -1,14 +1,29 @@
-import React from 'react'
-import Header from '../LoginComponent/Header'
-import Login from '../LoginComponent/Login'
+import React from 'react';
+
+import Login from '../LoginComponent/Login';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';  
+
+import RestaurantMenu from '../restaurantComponent/restaurantMenu';
 
 const Body = () => {
-  return (
-    <div>
-      <Header/>
-      <Login/>
-    </div>
-  )
+
+
+    const appRouter = createBrowserRouter(
+        [
+            {
+                path: '/',
+                element: <Login />
+            },
+            {
+                path: '/restaurant',
+                element: <RestaurantMenu />
+            },
+        ]
+    )
+
+    return (
+        <RouterProvider router={appRouter} />
+    )
 }
 
-export default Body
+export default Body;

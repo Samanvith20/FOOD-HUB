@@ -2,8 +2,11 @@ import React from 'react';
 
 import Login from '../LoginComponent/Login';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';  
+import Restaurantdata from '../restaurantComponent/Restaurantdata.js';
+import Maincontainer from '../restaurantComponent/Maincontainer.js';
 
-import RestaurantMenu from '../restaurantComponent/restaurantMenu';
+
+
 
 const Body = () => {
 
@@ -16,7 +19,12 @@ const Body = () => {
             },
             {
                 path: '/restaurant',
-                element: <RestaurantMenu />
+                element: 
+                <>
+                <Restaurantdata />
+                <Maincontainer/>
+                </>
+
             },
         ]
     )

@@ -6,3 +6,9 @@ export const CORS_API =
 "https://strange-fawn-gabardine.cyclic.app/api/proxy/swiggy/dapi/"
 export const CARD_IMG_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/";
+
+
+export const BASE_API_URL = "https://www.swiggy.com/dapi/";
+
+export const REST_MENU_API = (restaurantId) =>
+  `${BASE_API_URL}menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4529322&lng=73.86523799999999&restaurantId=${restaurantId}`;

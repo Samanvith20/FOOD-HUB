@@ -28,7 +28,7 @@ const Restaurantdata = () => {
       // Setting state
       setTitle(newTitle);
       setData(newData);
-      console.log(setData);
+      //console.log(setData);
     } catch (error) {
       console.error('Fetch error:', error);
     }

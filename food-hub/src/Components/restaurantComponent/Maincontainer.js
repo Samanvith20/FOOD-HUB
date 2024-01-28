@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { REST_API, CORS_API } from '../../utils/Constants';
 import Card from './Card';
 import ShimmerUI from '../ShimmerComponent/Shimmerui';
+import { Link } from 'react-router-dom';
 
 const Maincontainer = () => {
   const [restaurantList, setRestaurantList] = useState(null);
@@ -112,10 +113,15 @@ const Maincontainer = () => {
         </div>
       ) : (
         <div className="flex justify-center lg:justify-start items-center flex-wrap gap-7 my-2 px-12 mt-12">
-          {filteredRestList.map((items) => (
-            <Card resData={items} key={items.id} />
-          ))}
-        </div>
+        {filteredRestList.map((items) => (
+          <div key={items.info.id}>
+            <Link to={"/restaurant/" + items.info.id}>
+              <Card resData={items} />
+            </Link>
+          </div>
+        ))}
+      </div>
+      
       )}
     </div>
   );

@@ -1,10 +1,15 @@
 import { CARD_IMG_URL } from "../../utils/Constants"
 import veg from "../../images/veg.webp"
 import non_veg from "../../images/non-veg.webp"
+import { useDispatch } from "react-redux";
+import { addItems } from "../../utils/Store/cartSlice";
 
 const ItemCategory = ({ item }) => {
   //console.log(item)
-
+ const dispatch=useDispatch()
+ const handleadditem=(items)=>{
+   dispatch(addItems(items))
+ }
   
 
   return item.map((items) => (
@@ -87,8 +92,11 @@ const ItemCategory = ({ item }) => {
           </div>
         )}
         <button
-          className="rounded-xl bg-slate-900 text-white font-semibold lg:px-7 text-sm lg:text-base lg:py-[6px] md:px-7 md:py-[6px] px-4 py-[3px]">
-          Add
+          className="rounded-xl bg-slate-900 text-white font-semibold lg:px-7 text-sm lg:text-base lg:py-[6px] md:px-7 md:py-[6px] px-4 py-[3px]"
+          onClick={() => handleadditem(items)}
+          >
+
+          Add 
         </button>
       </div>
     </div>

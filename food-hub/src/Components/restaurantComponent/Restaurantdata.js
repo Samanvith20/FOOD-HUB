@@ -40,7 +40,7 @@ const Restaurantdata = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="slider lg:px-16 lg:my-10 md:px-16 my-3 md:my-5 w-full pt-3">
         <div className="w-full lg:pb-2 md:pb-2 pb-2 pt-2">
           {data && (

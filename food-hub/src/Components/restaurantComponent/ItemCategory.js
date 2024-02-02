@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addItems } from "../../utils/Store/cartSlice";
 
 const ItemCategory = ({ item }) => {
-  //console.log(item)
+  console.log(item)
  const dispatch=useDispatch()
  const handleadditem=(items)=>{
    dispatch(addItems(items))

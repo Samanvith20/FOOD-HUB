@@ -75,7 +75,7 @@ const Login = () => {
 
   return (
     <>
-    <Header onToggleForm={handlesigninform} showSignInForm={signinform}/>
+    {/* <Header onToggleForm={handlesigninform} showSignInForm={signinform}/> */}
       <div className="bg-gray-200 min-h-screen flex items-center justify-center">
         <form className="bg-white shadow-lg rounded px-10 pt-8 pb-10 mb-4 w-96">
           <h2 className="text-3xl font-bold mb-6 text-center">{signinform ? "Sign In" : "Sign up"}</h2>

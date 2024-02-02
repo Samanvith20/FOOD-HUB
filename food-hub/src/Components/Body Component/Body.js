@@ -12,6 +12,7 @@ const Body = () => {
   const AppLayout = () => (
     <>
       <Header />
+      
       <Outlet />
     </>
   );
@@ -22,15 +23,12 @@ const Body = () => {
     {
       path: "/",
       element: <AppLayout />,
+      
       errorElement: <Error />,
       children: [
         {
-          path: "/login",
-          element: (
-            <>
-              <Login />
-            </>
-          ),
+          path: '/login',
+          element: <Login />
         },
         {
           path: '/restaurant',

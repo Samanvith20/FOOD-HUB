@@ -36,7 +36,7 @@ const Header = ({ onToggleForm, showSignInForm }) => {
         navigate('/restaurant');
       } else {
         dispatch(removeUser());
-        navigate('/');
+        navigate('/login');
       }
     });
   }, []);
@@ -86,15 +86,9 @@ const Header = ({ onToggleForm, showSignInForm }) => {
         </div>
       ) : (
         <div className="flex items-center">
-          <div className="w-24 h-24 mt-0 ml-2">
+          <div className="w-24 h-24 mt-0 ml-2 ">
             <img src={LOGO_URL} alt="food-hub logo" />
           </div>
-          <button
-            className="mr-7 px-4 py-2 bg-gray-700 rounded text-white font-semibold hover:bg-gray-600 cursor-pointer"
-            onClick={onToggleForm}
-          >
-            {showSignInForm ? "Sign Up" : "Sign In"}
-          </button>
         </div>
       )}
     </div>

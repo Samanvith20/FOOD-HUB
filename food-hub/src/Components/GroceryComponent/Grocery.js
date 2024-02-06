@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import Grocerycomp from './Grocerycomp'
-import Groceryshimmer from './GroceryShimmer'
+import React, { useEffect, useState } from 'react';
+import Grocerycomp from './Grocerycomp';
+import Groceryshimmer from './GroceryShimmer';
 
 const Grocery = () => {
-   const[grocerylist,SetGroceryList]=useState()
-   const[grocerytitle,SetGrocerytitle]=useState()
-  useEffect(()=>{
-    fetchgrocerydata()
-  })
-    const fetchgrocerydata=async()=>{
-      const data= await fetch("https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fapi%2Finstamart%2Fhome%3FpageNo%3D2%26layoutId%3D3173%26storeId%3D1383574%26clientId%3DINSTAMART-APP")
-        const json=await data.json()
-        console.log(json);
-        SetGroceryList(json?.data?.widgets[1]?.data);
-        SetGrocerytitle(json?.data?.widgets[1]?.widgetInfo)
-         //console.log(SetGroceryList);
-         //console.log(SetGrocerytitle);
+  const [grocerylist, setGroceryList] = useState();
+  const [grocerytitle, setGroceryTitle] = useState();
+
+
+  useEffect(() => {
+    fetchGroceryData();
+  }, []);
+
+  const fetchGroceryData = async () => {
+    try {
+      const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fapi%2Finstamart%2Fhome%3FpageNo%3D2%26layoutId%3D3173%26storeId%3D1383574%26clientId%3DINSTAMART-APP");
+      const json = await data.json();
+      console.log(json);
+      setGroceryList(json?.data?.widgets?.[0]?.data);
+      setGroceryTitle(json?.data?.widgets?.[0]?.widgetInfo);
+      
+    } catch (error) {
+      console.error('Error fetching grocery data:', error);
     }
-    if(grocerylist===null){
-      <Groceryshimmer/>
-    }
-    if(grocerylist===undefined){
-      <Groceryshimmer/>
-    }
+  };
+
+  if (grocerylist === null || grocerylist === undefined) {
+    return <Groceryshimmer />;
+  }
+
   return (
     <div>
-      <Grocerycomp grocerytitle={grocerytitle} grocerylist={grocerylist}/>
+      <Grocerycomp groceryTitle={grocerytitle} groceryList={grocerylist} />
     </div>
-  )
-}
+  );
+};
 
-export default Grocery
+export default Grocery;

@@ -1,5 +1,5 @@
 import React from "react";
-import { CARD_IMG_URL } from "../../utils/Constants";
+import { CARD_IMG_URL,  } from "../../utils/Constants";
 
 const Carousal1 = ({ restData }) => {
   return (

@@ -6,7 +6,7 @@ export const CORS_API =
 "https://strange-fawn-gabardine.cyclic.app/api/proxy/swiggy/dapi/"
 export const CARD_IMG_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/";
-
+ 
 
 export const BASE_API_URL = "https://www.swiggy.com/dapi/";
 

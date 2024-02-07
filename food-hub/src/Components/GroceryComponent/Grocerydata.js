@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import GroceryCategory from './GroceryCategory';
 import { useParams } from 'react-router-dom';
+import ShimmerCard from '../ShimmerComponent/Shimmercard';
 
 const Grocerydata = () => {
   const [groceryList, setGroceryList] = useState([]);
@@ -38,13 +39,15 @@ const Grocerydata = () => {
         brand: item.name.split('(')[0].trim(), 
         price: item.offers.price,
       })) : [];
-
-      setGroceryList(productList);
+     setGroceryList(productList);
     } catch (error) {
       console.error('Error fetching grocery data:', error.message);
       
     }
   };
+  if (groceryList === null || groceryList === undefined) {
+    return <ShimmerCard />;
+  }
 
   return (
     <div>

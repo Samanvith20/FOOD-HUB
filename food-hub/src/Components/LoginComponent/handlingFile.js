@@ -12,7 +12,7 @@ const handleSignUp = (email, password, name, setErrorMessage) => {
         displayName: name,
       });
 
-      console.log(user);
+      //console.log(user);
       // Assuming you have a useHistory hook
       const navigate = useNavigate();
       navigate.push("/restaurant");

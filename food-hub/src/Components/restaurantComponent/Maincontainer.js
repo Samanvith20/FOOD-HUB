@@ -3,6 +3,7 @@ import { REST_API, CORS_API } from '../../utils/Constants';
 import Card from './Card';
 import ShimmerUI from '../ShimmerComponent/Shimmerui';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../../utils/hooks/useOnlineStatus';
 
 const Maincontainer = () => {
   const [restaurantList, setRestaurantList] = useState(null);
@@ -12,7 +13,8 @@ const Maincontainer = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
+  const onlinestatus=useOnlineStatus();
+   
   const fetchData = async () => {
     try {
       const response = await fetch(REST_API + CORS_API);
@@ -35,7 +37,26 @@ const Maincontainer = () => {
   if (filteredRestList == null) {
     return <ShimmerUI />;
   }
+  
+  if (!onlinestatus) {
+    return (
+      <div className="offline-message-container text-center mt-8">
+        <h1 className="offline-heading text-2xl text-gray-800">
+          Uh-oh! You're offline
+        </h1>
+        <p className="offline-text text-gray-600">
+          It seems like you're not connected to the internet. Please check your
+          connection and try again.
+        </p>
+        <p className="offline-tip text-sm text-gray-500">
+          Tip: You can try refreshing the page or connecting to a different
+          network.
+        </p>
+      </div>
+    );
+  }
 
+ 
   const filterBtnCss =
     'bg-transparent border-2 shadow-md border-solid border-zinc-300 px-1.5 text-xs lg:text-base lg:px-3.5 py-1 lg:py-1.5 rounded-2xl lg:rounded-3xl mr-1 lg:mr-4';
 

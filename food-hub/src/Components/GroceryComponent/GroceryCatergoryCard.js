@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const GroceryCatergoryCard = ({ categorydata }) => {
+  if(!categorydata) return 
   const { image, name, price, brand } = categorydata;
 
   const cardContainerStyle = {

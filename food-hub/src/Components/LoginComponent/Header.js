@@ -5,12 +5,14 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../utils/firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { addUser, removeUser } from "../../utils/Store/userSlice";
+import useOnlineStatus from '../../utils/hooks/useOnlineStatus';
 
-const Header = ({ onToggleForm, showSignInForm }) => {
+const Header = () => {
   const user = useSelector((store) => store.user);
   const CartItems = useSelector((store) => store.cart.items);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const onlinestatus=useOnlineStatus()
 
   const handleSignOut = () => {
     signOut(auth)
@@ -56,6 +58,7 @@ const Header = ({ onToggleForm, showSignInForm }) => {
       {/* Navigation links or Sign In */}
       {user ? (
         <div className="flex space-x-14 flex-row cursor-pointer">
+          <span> Online Status: {onlinestatus ? "✅" : "🔴"}</span>
           <Link to="/restaurant">
             <h1 className="text-lg font-semibold hover:text-gray-400 transition duration-300">
               Home

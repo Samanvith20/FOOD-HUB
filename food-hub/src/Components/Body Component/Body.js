@@ -8,6 +8,7 @@ import Error from "../../utils/Error.js"
 import Login from '../LoginComponent/Login.js';
 import LoadingScreen from '../../utils/LoadinScreen.js';
 import Cart from '../restaurantComponent/Cart.js';
+import Grocerydata from '../GroceryComponent/Grocerydata.js';
 const Body = () => {
   const AppLayout = () => (
     <>
@@ -77,6 +78,10 @@ const Body = () => {
                 {
                     path:"/Cart",
                     element:<Cart/>
+                },
+                {
+                  path:"/groceryInfo/:id",
+                  element:<Grocerydata/>
                 }
       ],
     },

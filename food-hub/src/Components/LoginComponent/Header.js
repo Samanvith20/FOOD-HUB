@@ -41,8 +41,8 @@ const Header = ({ onToggleForm, showSignInForm }) => {
     });
   }, []);
 
-  const spanCsss = "pr-12 lg:pr-6 lg:text-sm xl:pr-12 xl:text-base font-bold";
-  const linkCss = "text-gray-600 hover:text-orange-300";
+  // const spanCsss = "pr-12 lg:pr-6 lg:text-sm xl:pr-12 xl:text-base font-bold";
+  // const linkCss = "text-gray-600 hover:text-orange-300";
 
   return (
     <div className="bg-gray-800 text-white p-2 md:flex md:justify-between md:items-center">
@@ -76,9 +76,9 @@ const Header = ({ onToggleForm, showSignInForm }) => {
               Grocery
             </h3>
           </Link>
-          <Link to="/Cart" className={linkCss}>
+          <Link to="/Cart" className="text-lg font-semibold hover:text-gray-400 transition duration-30">
             <i className="ri-shopping-cart-2-line lg:text-base lg:pr-1 lg:font-semibold text-lg pr-2 font-bold"></i>
-            <span className={spanCsss}>Cart ({CartItems.length})</span>
+            <span className="">Cart ({CartItems.length})</span>
           </Link>
           <button onClick={handleSignOut} className="font-bold text-white">
             Sign Out

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import RestaurantMenuShimmer from '../ShimmerComponent/RestaurantMenuShimmer';
-import { REST_MENU_API } from "../../utils/Constants";
 import useRestaurantmenu from '../../utils/hooks/useRestaurantmenu';
 import RestaurantHeader from './RestaurantHeader';
 import ResOffer from './ResOffer';
 import ResCategory from './ResCategory';
-import Header from '../LoginComponent/Header';
+
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -24,7 +22,7 @@ const RestaurantMenu = () => {
     <div>
        
       <div className="lg:w-8/12 md:w-8/12 w-10/12 mx-auto lg:pt-5 md:pt-4 pt-2">
-        <Link to={"/"}>
+        <Link to={"/restaurant"}>
           <span className={linksCss}>Home</span>
         </Link>
         <span className={linksCss}>/</span>

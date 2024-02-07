@@ -1,5 +1,5 @@
-// Grocerycomp.js
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import Grocerycard from './Grocerycard';
 
 const Grocerycomp = (props) => {
@@ -13,8 +13,10 @@ const Grocerycomp = (props) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-3 ">
         {groceryList.map((item, index) => (
-          <div key={index} >
-            <Grocerycard groceryData={item} />
+          <div key={index}>
+             <Link to={`/groceryInfo/${item.displayName}`}>
+              <Grocerycard groceryData={item} />
+            </Link>
           </div>
         ))}
       </div>

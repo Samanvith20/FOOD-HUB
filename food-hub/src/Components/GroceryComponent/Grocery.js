@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Grocerycomp from './Grocerycomp';
-import Groceryshimmer from './GroceryShimmer';
+import ShimmerUI from '../ShimmerComponent/Shimmerui';
 
 const Grocery = () => {
   const [grocerylist, setGroceryList] = useState();
@@ -25,7 +25,7 @@ const Grocery = () => {
   };
 
   if (grocerylist === null || grocerylist === undefined) {
-    return <Groceryshimmer />;
+    return <ShimmerUI />;
   }
 
   return (

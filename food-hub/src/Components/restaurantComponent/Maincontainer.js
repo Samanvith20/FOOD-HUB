@@ -24,7 +24,7 @@ const Maincontainer = () => {
       const resData =
         json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
         json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        console.log(resData);
+        //console.log(resData);
       setFilteredRestList(resData);
       setRestaurantList(resData);
     } catch (error) {

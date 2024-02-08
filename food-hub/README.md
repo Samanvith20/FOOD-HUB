@@ -1,7 +1,8 @@
 <div align="center">
-  <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png"width:60px></img>
-  <h1><b>🚀 Your Food Hub</b></h3>
+  <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png" width="60px" alt="Food Hub Logo">
+  <h1><b>🚀 Your Food Hub</b></h1>
 </div>
+
 
 
 

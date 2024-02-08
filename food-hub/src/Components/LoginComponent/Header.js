@@ -51,6 +51,7 @@ const Header = () => {
       {/* Logo */}
       {user && (
         <div className="w-24 h-24 mt-1 ml-2">
+          
           <img src={LOGO_URL} alt="food-hub logo" />
         </div>
       )}

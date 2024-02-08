@@ -9,12 +9,14 @@ import Login from '../LoginComponent/Login.js';
 import LoadingScreen from '../../utils/LoadinScreen.js';
 import Cart from '../restaurantComponent/Cart.js';
 import Grocerydata from '../GroceryComponent/Grocerydata.js';
+import Footer from './Footer.js';
 const Body = () => {
   const AppLayout = () => (
     <>
       <Header />
       
       <Outlet />
+      <Footer/>
     </>
   );
  const About=lazy(()=>import("../AboutComponent/About.js"))

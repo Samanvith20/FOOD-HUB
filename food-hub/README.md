@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png"width:120px></img>
+  <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png"width:60px></img>
   <h1><b>🚀 Your Food Hub</b></h3>
 </div>
 

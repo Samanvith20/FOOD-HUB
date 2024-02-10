@@ -40,6 +40,7 @@
 > ### 🚧 Error 404 Page: In the event of a page not found or API failure, Food Hub gracefully presents a user-friendly Error 404 page, ensuring a smooth and informative experience for users.<br></br>
 
 > ### 📱 Completely Responsive: Enjoy a seamless experience across various devices as Food Hub ensures complete responsiveness, adapting to different screen sizes and resolutions.<br></br>
+>  ###    Login/Sign-in: 🔐 Food Hub is working on enhancing security and user experience with a dedicated login/sign-in feature, allowing users to create accounts and access personalized services.
 
 ---
 <br></br>
@@ -64,7 +65,7 @@
 
 > Payment: 💳 Food Hub is gearing up to introduce a seamless payment experience, providing users with secure and efficient payment options for a hassle-free checkout process.
 
-> Login/Sign-in: 🔐 Food Hub is working on enhancing security and user experience with a dedicated login/sign-in feature, allowing users to create accounts and access personalized services.
+
 
 ---
 <br></br>

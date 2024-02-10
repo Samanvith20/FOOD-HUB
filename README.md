@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <div align="center">
   <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png" width="60px" alt="Food Hub Logo">
   <h1><b>🚀 Your Food Hub</b></h1>
@@ -94,4 +92,3 @@
 <br></br>
 
 <div align="center"><h1>Food Hub is made with ❤️</h1> </div>
->>>>>>> 8a79636e1c448228166e9dff10fccfb363a76f22

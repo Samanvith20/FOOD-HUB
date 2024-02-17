@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 =======
 <div align="center">
   <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png" width="60px" alt="Food Hub Logo">

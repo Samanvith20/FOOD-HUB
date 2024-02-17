@@ -1,5 +1,5 @@
 
-=======
+
 <div align="center">
   <img src="https://brand.foodhub.com/images/png/logo_vertical_new.png" width="60px" alt="Food Hub Logo">
   <h1><b>🚀 Your Food Hub</b></h1>
@@ -66,7 +66,7 @@
 
 > Payment: 💳 Food Hub is gearing up to introduce a seamless payment experience, providing users with secure and efficient payment options for a hassle-free checkout process.
 
-> Login/Sign-in: 🔐 Food Hub is working on enhancing security and user experience with a dedicated login/sign-in feature, allowing users to create accounts and access personalized services.
+
 
 ---
 <br></br>

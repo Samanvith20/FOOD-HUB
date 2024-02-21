@@ -11,11 +11,12 @@ const RestaurantMenu = () => {
  
  const data=useRestaurantmenu(id)
   const{restInfo,restMenu,restOff}=data
-//    console.log(restInfo);
 
-  if (restInfo === null) {
-    return <RestaurantMenuShimmer />;
-  }
+
+  if (restInfo === null && restMenu === null && restOff === null) {
+  return <RestaurantMenuShimmer />;
+    }
+
   const linksCss =
   "lg:text-[10px] md:text-[10px] text-[8px] text-gray-400 font-bold pr-1";
   return (
@@ -29,7 +30,7 @@ const RestaurantMenu = () => {
         <span className={linksCss}>Hyderabad</span>
         <span className={linksCss}>/</span>
         <span className="lg:text-[10px] md:text-[10px] text-[8px] text-gray-700 font-bold pr-1">
-          {restInfo.name}
+          {restInfo?.labels?.name}
         </span>
       </div>
       <div className="h-full lg:my-4 md:my-4 my-2 lg:w-8/12 md:w-8/12 w-10/12 mx-auto">

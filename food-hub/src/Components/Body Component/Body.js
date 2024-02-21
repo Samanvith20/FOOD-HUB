@@ -10,7 +10,9 @@ import LoadingScreen from '../../utils/LoadinScreen.js';
 import Cart from '../restaurantComponent/Cart.js';
 import Grocerydata from '../GroceryComponent/Grocerydata.js';
 import Footer from './Footer.js';
+import useRestaurantmenu from '../../utils/hooks/useRestaurantmenu.js';
 const Body = () => {
+  useRestaurantmenu()
   const AppLayout = () => (
     <>
       <Header />

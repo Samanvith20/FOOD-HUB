@@ -5,6 +5,7 @@ const useRestaurantmenu = (id) => {
   const [restInfo, setRestInfo] = useState(null);
   const [restMenu, setRestMenu] = useState(null);
   const [restOff, setRestOff] = useState(null);
+ 
   useEffect(()=>{
      fetchresmenu()
   },[])
@@ -17,14 +18,10 @@ const useRestaurantmenu = (id) => {
       }
 
       const data = await response.json();
-     //console.log(data);
+     console.log(data);
       const category =
-        data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-          (cat) =>
-            cat?.card?.card?.["@type"] ===
-            "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-        ) ||
-        data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+        
+        data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
           (cat) =>
             cat?.card?.card?.["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
@@ -41,6 +38,7 @@ const useRestaurantmenu = (id) => {
         data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers ||
         data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers
       );
+      
     } catch (error) {
       console.error('Error fetching restaurant data:', error);
     }
